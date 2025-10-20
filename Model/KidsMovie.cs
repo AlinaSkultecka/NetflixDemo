@@ -9,7 +9,7 @@ namespace NetflixDemo.Model
     class KidsMovie : MediaType
     {
         public int RecommendedAge { get; private set; }
-        public KidsMovie(string title, string genre, int releaseYear, string language, int recommendedAge) : base(title, genre, releaseYear, language)
+        public KidsMovie(string title, GenreType genre, int releaseYear, string language, int recommendedAge) : base(title, genre, releaseYear, language)
         {
             RecommendedAge = recommendedAge;
         }

@@ -10,7 +10,7 @@ namespace NetflixDemo.Model
     {
         public int DurationMinutes { get; private set; } // Duration in minutes
 
-        public Movie(string title, string genre, int releaseYear, string language, int durationMinutes) : base(title, genre, releaseYear, language)
+        public Movie(string title, GenreType genre, int releaseYear, string language, int durationMinutes) : base(title, genre, releaseYear, language)
         {
             DurationMinutes = durationMinutes;
         }
@@ -23,6 +23,12 @@ namespace NetflixDemo.Model
         public override string GetSummary()
         {
             return base.GetSummary() + $", Duration: {DurationMinutes} min";
+        }
+
+        public bool IsClassic()
+        {
+            int currentYear = DateTime.Now.Year;
+            return currentYear - ReleaseYear > 20;
         }
     }
 }

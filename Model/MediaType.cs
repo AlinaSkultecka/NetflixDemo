@@ -6,14 +6,30 @@ using System.Threading.Tasks;
 
 namespace NetflixDemo.Model
 {
+    enum GenreType
+    {
+        Drama,
+        Science,
+        SciFi,
+        Nature,
+        Action,
+        Crime,
+        Sports,
+        Documentary,
+        Horror,
+        Comedy,
+        Romance
+    }
+
+
     abstract class MediaType
     {
         public string Title { get; private set; }
-        public string Genre { get; private set; }
+        public GenreType Genre { get; private set; }
         public int ReleaseYear { get; private set; }
         public string Language { get; set; } = "English"; // Default language
 
-        public MediaType(string title, string genre, int releaseYear, string language)
+        public MediaType(string title, GenreType genre, int releaseYear, string language)
         {
             Title = title;
             Genre = genre;

@@ -9,7 +9,7 @@ namespace NetflixDemo.Model
     class Documentary : MediaType
     {
         public string Topic { get; private set; } // Topic of the documentary
-        public Documentary(string title, string genre, int releaseYear, string language, string topic) : base(title, genre, releaseYear, language)
+        public Documentary(string title, GenreType genre, int releaseYear, string language, string topic) : base(title, genre, releaseYear, language)
         {
             Topic = topic;
         }

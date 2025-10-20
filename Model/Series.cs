@@ -9,7 +9,7 @@ namespace NetflixDemo.Model
     class Series : MediaType
     {
         public int Seasons { get; private set; } // Number of seasons
-        public Series(string title, string genre, int releaseYear, string language, int seasons) : base(title, genre, releaseYear, language)
+        public Series(string title, GenreType genre, int releaseYear, string language, int seasons) : base(title, genre, releaseYear, language)
         {
             Seasons = seasons;
         }

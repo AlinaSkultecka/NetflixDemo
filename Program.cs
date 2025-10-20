@@ -10,12 +10,12 @@ namespace NetflixDemo
             // MediaPlayer.GetUppercaseTitle();
             // MediaPlayer.ViewMovies();
             // MediaPlayer.ViewSeries();
-             //MediaPlayer.ShowLongMovies();
+            //MediaPlayer.ShowLongMovies();
             // MediaPlayer.ShowSeriesWithManySeasons();
+            //MediaPlayer.MoviesDramaCrime();
+            MediaPlayer.SortByLanguage();
 
-            MediaPlayer.Run();
-
-
+            //MediaPlayer.Run();
         }
     }
 }
